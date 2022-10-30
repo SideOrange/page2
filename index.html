@@ -17,18 +17,22 @@
 		scroller.addEventListener("scroll", (event) => {
 			output.textContent = 'Scroller Lmao: ${scroller.scrollTop}';
 			output.textContent = `scrollTop: ${scroller.scrollTop}`;
-			if (scroller.scrollTop > ((window.innerHeight/2)/10)*11){
-				scroller.scrollTop = ((window.innerHeight/2)/10)+1;
+			if (scroller.scrollTop > ((vh(50))/10)*11){
+				scroller.scrollTop = ((vh(50))/10)+1;
 			}
-			if(scroller.scrollTop < ((window.innerHeight/2)/10)){
-				scroller.scrollTop = ((window.innerHeight/2)/10)*12;
+			if(scroller.scrollTop < ((vh(50))/10)){
+				scroller.scrollTop = ((vh(50))/10)*11;
 			}
 			
 			
 		});
 
 	}
-
+	
+	function vh(v) {
+		var h = Math.max(document. documentElement.clientHeight, window.innerHeight || 0);
+		return (v * h) / 100;
+	}
 
 </script>
 </head>
