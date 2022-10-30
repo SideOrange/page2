@@ -1,0 +1,58 @@
+.loop{
+	background-color:red;
+	display:flex;
+	position:fixed;
+	bottom:0;
+	right:0;
+	width:50vw;
+	height:50vh;
+	overflow: auto;
+	display:block;
+	scrollbar-width: none;
+}
+
+.list{
+	
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-decoration:none;
+}
+
+/*
+li{
+	font-size:3vh;
+	list-style:none;
+	padding:1vh 10px;
+}
+li{
+	font-size:17px;
+	list-style:none;
+	padding:5px 10px;
+}
+*/
+li{
+	font-size:3vh;
+	list-style:none;
+	padding:1vh 10px;
+	max-height:5vh;
+}
+
+
+li:hover{
+	background-color:grey;
+}
+
+#scroller {
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  border: 5px dashed orange;
+}
+
+#output {
+  padding: 1rem 0;
+}

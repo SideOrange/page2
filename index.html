@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta charset = "utf-8">
+    <meta name = "some data" content = "the data">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>The Main Page</title>
+    <link rel = "stylesheet" href="css/main.css">
+<script>
+	
+	
+	
+
+	function eh(){
+		const scroller = document.getElementById("list");
+		const output = document.querySelector("#output");
+		scroller.scrollTop = 50;
+		scroller.addEventListener("scroll", (event) => {
+			
+			if (scroller.scrollTop > ((window.innerHeight/2)/10)*11){
+				scroller.scrollTop = ((window.innerHeight/2)/10)+1;
+			}
+			if(scroller.scrollTop < ((window.innerHeight/2)/10)){
+				scroller.scrollTop = ((window.innerHeight/2)/10)*11;
+			}
+			
+			
+		});
+
+	}
+
+
+</script>
+</head>
+
+
+
+
+<body>
+
+	
+	
+    <header id="header">
+        <h1>HOME PAGE</h1>
+    </header>
+    <main id="ff">
+		<a class="menu-button" onclick="run()"><img src="images/Menu.png"  alt="menu" class="menu-image"></a>
+		
+		<div id="list" class="loop">
+			<ul>
+				<li><a href="#home">9</a></li>
+				<li><a href="#home" onclick="eh()">Home</a></li>
+				<li><a href="#home">1</a></li>
+				<li><a href="#home">2</a></li>
+				<li><a href="#home">3</a></li>
+				<li><a href="#home">4</a></li>
+				<li><a href="#home">5</a></li>
+				<li><a href="#home">6</a></li>
+				<li><a href="#home">7</a></li>
+				<li><a href="#home">8</a></li>
+				<li><a href="#home">9</a></li>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#home">1</a></li>
+				<li><a href="#home">2</a></li>
+				<li><a href="#home">3</a></li>
+				<li><a href="#home">4</a></li>
+				<li><a href="#home">5</a></li>
+				<li><a href="#home">6</a></li>
+				<li><a href="#home">7</a></li>
+				<li><a href="#home">8</a></li>
+				<li><a href="#home">9</a></li>
+				<li><a href="#home" onclick="eh()">Home</a></li>
+				
+
+
+			</ul>
+		</div> 
+
+	<div id="container">
+		<div id="scroller">
+			<p>
+			Far out in the uncharted backwaters of the unfashionable end of the
+			western spiral arm of the Galaxy lies a small unregarded yellow sun.
+			Orbiting this at a distance of roughly ninety-two million miles is an
+			utterly insignificant little blue green planet whose ape-descended life
+			forms are so amazingly primitive that they still think digital watches are
+			a pretty neat idea.
+			</p>
+		</div>
+	</div>
+
+<div id="output">scrollTop: 0</div>
+
+
+
+    </main>
+
+</body>
+</html>
