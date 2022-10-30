@@ -15,7 +15,7 @@
 		const output = document.querySelector("#output");
 		scroller.scrollTop = 50;
 		scroller.addEventListener("scroll", (event) => {
-			output.textContent = "Scroller Lmao: ${scroller.scrollTop}"
+			output.textContent = "Scroller Lmao: ${scroller.scrollTop}";
 			if (scroller.scrollTop > ((window.innerHeight/2)/10)*11){
 				scroller.scrollTop = ((window.innerHeight/2)/10)+1;
 			}
