@@ -7,32 +7,30 @@
     <link rel = "stylesheet" href="css/main.css">
 <script>
 	
-	
-	
-
 	function eh(){
 		const scroller = document.getElementById("list");
 		const output = document.querySelector("#output");
 		scroller.scrollTop = 50;
 		scroller.addEventListener("scroll", (event) => {
-			output.textContent = 'Scroller Lmao: ${scroller.scrollTop} ${document. documentElement.clientHeight}';
-			output.textContent = `scrollTop: ${scroller.scrollTop}`;
-			if (scroller.scrollTop > ((vh(50))/10)*11){
-				scroller.scrollTop = ((vh(50))/10)+1;
+			output.textContent = `scrollTop: ${document.getElementById("list").offsetHeight}`;
+			
+			
+			if (scroller.scrollTop > ((vh(100))/10)*11){
+				scroller.scrollTop = ((vh(100))/10)+1;
 			}
-			if(scroller.scrollTop < ((vh(50))/10)){
-				scroller.scrollTop = ((vh(50))/10)*11;
+			if(scroller.scrollTop < ((vh(100))/10)){
+				scroller.scrollTop = ((vh(100))/10)*11;
 			}
 			
 			
 		});
 
 	}
-	
-	function vh(v) {
-		var h = Math.max(document. documentElement.clientHeight, window.innerHeight || 0);
-		return (v * h) / 100;
-	}
+
+    function vh(v) {
+    var h = Math.max(document.getElementById("list").offsetHeight);
+    return (v * h) / 100;
+    }
 
 </script>
 </head>
